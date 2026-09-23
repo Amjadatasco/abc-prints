@@ -141,10 +141,10 @@ export default function DigitalServices({ addServiceRequest }) {
         <div className="hero-badge">
           🌐 حلول رقمية وإبداعية متكاملة لتنمية أعمالك
         </div>
-        <h1 className="hero-title" style={{ fontSize: '2.8rem' }}>
+        <h1 className="hero-title" style={{ fontSize: '2.1rem' }}>
           الخدمات الرقمية والحلول الإعلانية
         </h1>
-        <p className="hero-subtitle" style={{ fontSize: '1.1rem', maxWidth: '820px' }}>
+        <p className="hero-subtitle" style={{ fontSize: '0.95rem', maxWidth: '750px' }}>
           نرافقك في الفضاء الرقمي لتأسيس حضور قوي لشركتك من خلال التسويق الاحترافي وبناء المتاجر والمواقع وهندسة الهوية البصرية.
         </p>
       </section>

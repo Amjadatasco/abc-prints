@@ -13,13 +13,13 @@ import logoEnTransparent from '../assets/logo_en_transparent.png?v=clean2';
  *  style:   custom inline styles
  */
 export default function LogoABC({ variant = 'ar', size = 'md', dark = false, style = {} }) {
-  // Height mapping: sm=72px (navbar), md=120px (footer), lg=140px (hero)
+  // Height mapping: sm=54px (navbar), md=96px (footer), lg=115px (hero)
   const heightMap = {
-    sm: 72,
-    md: 120,
-    lg: 140
+    sm: 54,
+    md: 96,
+    lg: 115
   };
-  const height = heightMap[size] || 120;
+  const height = heightMap[size] || 96;
 
   // Use highest quality source for Arabic, transparent for English
   const imgSrc = variant === 'en' ? logoEnTransparent : logoArHQ;

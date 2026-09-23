@@ -170,10 +170,10 @@ export default function CustomWebsiteBuilder({ addServiceRequest }) {
         <div className="hero-badge">
           💻 صمم موقعك الإلكتروني الخاص بأسعار معيارية دقيقة
         </div>
-        <h1 className="hero-title" style={{ fontSize: '3rem' }}>
+        <h1 className="hero-title" style={{ fontSize: '2.1rem' }}>
           أداة تصميم المواقع وتحديد الأسعار
         </h1>
-        <p className="hero-subtitle" style={{ fontSize: '1.1rem', maxWidth: '800px' }}>
+        <p className="hero-subtitle" style={{ fontSize: '0.95rem', maxWidth: '750px' }}>
           قم ببناء وتخصيص مواصفات موقعك المثالي، واكتشف فوراً التسعيرة النهائية التقديرية المحتسبة وفقاً لمتوسط أسعار تطوير الويب العالمية.
         </p>
       </section>

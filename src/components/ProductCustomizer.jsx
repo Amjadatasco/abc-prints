@@ -281,10 +281,10 @@ export default function ProductCustomizer({ addToCart }) {
         <div className="hero-badge">
           🎨 مصمم المنتجات والهدايا التفاعلي
         </div>
-        <h1 className="hero-title" style={{ fontSize: '2.6rem' }}>
+        <h1 className="hero-title" style={{ fontSize: '2.1rem' }}>
           صمم منتجك وهديتك الخاصة
         </h1>
-        <p className="hero-subtitle" style={{ fontSize: '1.05rem', maxWidth: '800px' }}>
+        <p className="hero-subtitle" style={{ fontSize: '0.95rem', maxWidth: '750px' }}>
           قم ببناء هديتك المخصصة بسهولة تامة. حدد نوع المادة، ثم ارفع التصميم أو شعار منشأتك، وأضف نصوصاً مخصصة للحصول على نتيجة فورية مطابقة للواقع.
         </p>
       </section>

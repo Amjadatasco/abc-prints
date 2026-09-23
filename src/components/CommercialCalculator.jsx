@@ -108,10 +108,10 @@ export default function CommercialCalculator({ addCommercialOrder }) {
         <div className="hero-badge">
           📊 حاسبة الطباعة الرقمية والتجارية
         </div>
-        <h1 className="hero-title" style={{ fontSize: '2.6rem' }}>
+        <h1 className="hero-title" style={{ fontSize: '2.1rem' }}>
           حاسبة تكلفة الطباعة المباشرة
         </h1>
-        <p className="hero-subtitle" style={{ fontSize: '1.05rem', maxWidth: '800px' }}>
+        <p className="hero-subtitle" style={{ fontSize: '0.95rem', maxWidth: '750px' }}>
           احسب تكلفة مطبوعاتك الرقمية واللفافات بدقة مبنية على الأسعار العالمية والمقاييس القياسية مع تطبيق خصومات الكميات التلقائية.
         </p>
       </section>
