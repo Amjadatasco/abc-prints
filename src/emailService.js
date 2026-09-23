@@ -18,7 +18,7 @@ export async function sendOrderNotificationEmail(data) {
 
   try {
     const templateParams = {
-      to_email: 'amjad.atassi@outlook.com',
+      to_email: 'info@abc-prints.com',
       order_id: data.id || 'N/A',
       order_type: data.type || 'جديد',
       customer_name: data.customerName || data.clientName || data.companyName || 'عميل جديد',
