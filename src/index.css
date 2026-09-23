@@ -1614,7 +1614,7 @@ button, .btn {
 
 .custom-select-card {
   background: #ffffff;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--panel-border);
   border-radius: var(--border-radius-md);
   padding: 20px;
   cursor: pointer;
@@ -1625,19 +1625,19 @@ button, .btn {
   align-items: center;
   justify-content: space-between;
   min-height: 200px;
-  box-shadow: none;
+  box-shadow: var(--shadow-sm);
 }
 
 .custom-select-card:hover {
-  border-color: var(--secondary-color);
-  background: #ffffff;
+  border-color: var(--primary-color);
+  background: #f8fafc;
   transform: translateY(-2.5px);
 }
 
 .custom-select-card.selected {
-  border: 2px solid var(--secondary-color);
+  border: 2px solid var(--primary-color);
   background: #ffffff;
-  box-shadow: none;
+  box-shadow: 0 0 12px rgba(2, 132, 199, 0.15);
 }
 
 .custom-select-card .card-icon {
@@ -1653,12 +1653,16 @@ button, .btn {
 .custom-select-card h4 {
   font-size: 1.05rem;
   margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.custom-select-card.selected h4 {
   color: var(--primary-color);
 }
 
 .custom-select-card p {
   font-size: 0.8rem;
-  color: var(--primary-color);
+  color: var(--text-muted);
   line-height: 1.45;
   margin-bottom: 10px;
 }
@@ -1680,7 +1684,7 @@ button, .btn {
 
 .feature-checkbox-card {
   background: #ffffff;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--panel-border);
   border-radius: var(--border-radius-md);
   padding: 16px;
   cursor: pointer;
@@ -1688,17 +1692,18 @@ button, .btn {
   align-items: center;
   gap: 12px;
   transition: var(--transition-smooth);
-  box-shadow: none;
+  box-shadow: var(--shadow-sm);
 }
 
 .feature-checkbox-card:hover {
-  border-color: var(--secondary-color);
-  background: #ffffff;
+  border-color: var(--primary-color);
+  background: #f8fafc;
 }
 
 .feature-checkbox-card.selected {
-  border: 2px solid var(--secondary-color);
+  border: 2px solid var(--primary-color);
   background: #ffffff;
+  box-shadow: 0 0 10px rgba(2, 132, 199, 0.12);
 }
 
 .feature-checkbox-card input[type="checkbox"] {
@@ -1718,12 +1723,16 @@ button, .btn {
 
 .feature-checkbox-info strong {
   font-size: 0.9rem;
+  color: #0f172a;
+}
+
+.feature-checkbox-card.selected .feature-checkbox-info strong {
   color: var(--primary-color);
 }
 
 .feature-checkbox-info span {
   font-size: 0.75rem;
-  color: var(--primary-color);
+  color: var(--text-muted);
 }
 
 .feature-checkbox-price {
