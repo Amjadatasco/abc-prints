@@ -15,6 +15,9 @@ export default function Footer({ setActiveTab }) {
           <li onClick={() => setActiveTab('custom_web')}>صمم موقعك</li>
           <li onClick={() => setActiveTab('admin')}>لوحة تحكم الأدمن</li>
         </ul>
+        <div style={{ margin: '15px 0', fontSize: '0.95rem', color: 'var(--text-muted)' }}>
+          راسلنا على: <a href="mailto:info@abc-prints.com" style={{ color: 'var(--primary-color)', textDecoration: 'none', fontWeight: 'bold', display: 'inline-block', direction: 'ltr' }}>info@abc-prints.com</a>
+        </div>
         <p style={{ fontSize: '0.85rem' }}>
           جميع الحقوق محفوظة لـ &copy; {new Date().getFullYear()} شركة ABC للطباعة والدعاية والإعلان.
         </p>
