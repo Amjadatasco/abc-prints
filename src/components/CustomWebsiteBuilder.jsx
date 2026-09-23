@@ -263,18 +263,17 @@ export default function CustomWebsiteBuilder({ addServiceRequest }) {
                     key={key}
                     onClick={() => setPagesCount(key)}
                     style={{
-                      border: '1px solid ' + (pagesCount === key ? 'var(--primary-color)' : 'var(--panel-border)'),
-                      background: pagesCount === key ? 'rgba(217, 70, 239, 0.08)' : 'rgba(30, 33, 50, 0.4)',
+                      border: pagesCount === key ? '2px solid var(--secondary-color)' : '1px solid var(--secondary-color)',
+                      background: '#ffffff',
                       borderRadius: 'var(--border-radius-md)',
                       padding: '16px',
                       textAlign: 'center',
                       cursor: 'pointer',
-                      transition: 'var(--transition-smooth)',
-                      boxShadow: pagesCount === key ? '0 0 10px rgba(217, 70, 239, 0.1)' : 'none'
+                      transition: 'var(--transition-smooth)'
                     }}
                   >
-                    <div style={{ fontWeight: 600, fontSize: '0.95rem', color: 'var(--text-white)', marginBottom: '4px' }}>{labelMap[key]}</div>
-                    <div style={{ fontSize: '0.8rem', color: pagesCount === key ? 'var(--primary-color)' : 'var(--text-muted)', fontFamily: 'var(--font-english)', fontWeight: 700 }}>
+                    <div style={{ fontWeight: 600, fontSize: '0.95rem', color: 'var(--primary-color)', marginBottom: '4px' }}>{labelMap[key]}</div>
+                    <div style={{ fontSize: '0.8rem', color: 'var(--primary-color)', fontFamily: 'var(--font-english)', fontWeight: 700 }}>
                       {pagePrices[key] === 0 ? 'مجاناً' : `+$${pagePrices[key]}`}
                     </div>
                   </div>
@@ -296,49 +295,49 @@ export default function CustomWebsiteBuilder({ addServiceRequest }) {
               <div 
                 onClick={() => setDesignType('template')}
                 style={{
-                  border: '1px solid ' + (designType === 'template' ? 'var(--secondary-color)' : 'var(--panel-border)'),
-                  background: designType === 'template' ? 'rgba(6, 182, 212, 0.08)' : 'rgba(30, 33, 50, 0.4)',
+                  border: designType === 'template' ? '2px solid var(--secondary-color)' : '1px solid var(--secondary-color)',
+                  background: '#ffffff',
                   borderRadius: 'var(--border-radius-md)',
                   padding: '20px',
                   cursor: 'pointer',
                   transition: 'var(--transition-smooth)'
                 }}
               >
-                <h4 style={{ fontSize: '1rem', color: 'var(--text-white)', marginBottom: '6px' }}>قالب أنيق معدل</h4>
-                <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', lineHeight: '1.4', marginBottom: '8px' }}>تعديل وتخصيص قالب مجهز بمستوى احترافي ليلائم علامتك.</p>
-                <div style={{ fontFamily: 'var(--font-english)', fontWeight: 700, color: 'var(--secondary-color)', fontSize: '0.95rem' }}>+$0</div>
+                <h4 style={{ fontSize: '1rem', color: 'var(--primary-color)', marginBottom: '6px' }}>قالب أنيق معدل</h4>
+                <p style={{ fontSize: '0.75rem', color: 'var(--primary-color)', lineHeight: '1.4', marginBottom: '8px' }}>تعديل وتخصيص قالب مجهز بمستوى احترافي ليلائم علامتك.</p>
+                <div style={{ fontFamily: 'var(--font-english)', fontWeight: 700, color: 'var(--primary-color)', fontSize: '0.95rem' }}>+$0</div>
               </div>
 
               <div 
                 onClick={() => setDesignType('custom')}
                 style={{
-                  border: '1px solid ' + (designType === 'custom' ? 'var(--secondary-color)' : 'var(--panel-border)'),
-                  background: designType === 'custom' ? 'rgba(6, 182, 212, 0.08)' : 'rgba(30, 33, 50, 0.4)',
+                  border: designType === 'custom' ? '2px solid var(--secondary-color)' : '1px solid var(--secondary-color)',
+                  background: '#ffffff',
                   borderRadius: 'var(--border-radius-md)',
                   padding: '20px',
                   cursor: 'pointer',
                   transition: 'var(--transition-smooth)'
                 }}
               >
-                <h4 style={{ fontSize: '1rem', color: 'var(--text-white)', marginBottom: '6px' }}>واجهات فريدة مخصصة</h4>
-                <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', lineHeight: '1.4', marginBottom: '8px' }}>بناء وهندسة الواجهات وتجربة المستخدم (UI/UX) خصيصاً لك من الصفر.</p>
-                <div style={{ fontFamily: 'var(--font-english)', fontWeight: 700, color: 'var(--secondary-color)', fontSize: '0.95rem' }}>+${designPrices.custom}</div>
+                <h4 style={{ fontSize: '1rem', color: 'var(--primary-color)', marginBottom: '6px' }}>واجهات فريدة مخصصة</h4>
+                <p style={{ fontSize: '0.75rem', color: 'var(--primary-color)', lineHeight: '1.4', marginBottom: '8px' }}>بناء وهندسة الواجهات وتجربة المستخدم (UI/UX) خصيصاً لك من الصفر.</p>
+                <div style={{ fontFamily: 'var(--font-english)', fontWeight: 700, color: 'var(--primary-color)', fontSize: '0.95rem' }}>+${designPrices.custom}</div>
               </div>
 
               <div 
                 onClick={() => setDesignType('premium')}
                 style={{
-                  border: '1px solid ' + (designType === 'premium' ? 'var(--secondary-color)' : 'var(--panel-border)'),
-                  background: designType === 'premium' ? 'rgba(6, 182, 212, 0.08)' : 'rgba(30, 33, 50, 0.4)',
+                  border: designType === 'premium' ? '2px solid var(--secondary-color)' : '1px solid var(--secondary-color)',
+                  background: '#ffffff',
                   borderRadius: 'var(--border-radius-md)',
                   padding: '20px',
                   cursor: 'pointer',
                   transition: 'var(--transition-smooth)'
                 }}
               >
-                <h4 style={{ fontSize: '1rem', color: 'var(--text-white)', marginBottom: '6px' }}>تصميم ثلاثي الأبعاد وتفاعلي</h4>
-                <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', lineHeight: '1.4', marginBottom: '8px' }}>تأثيرات بصرية استثنائية، حركات تفاعلية مذهلة لجذب الانتباه.</p>
-                <div style={{ fontFamily: 'var(--font-english)', fontWeight: 700, color: 'var(--secondary-color)', fontSize: '0.95rem' }}>+${designPrices.premium}</div>
+                <h4 style={{ fontSize: '1rem', color: 'var(--primary-color)', marginBottom: '6px' }}>تصميم ثلاثي الأبعاد وتفاعلي</h4>
+                <p style={{ fontSize: '0.75rem', color: 'var(--primary-color)', lineHeight: '1.4', marginBottom: '8px' }}>تأثيرات بصرية استثنائية، حركات تفاعلية مذهلة لجذب الانتباه.</p>
+                <div style={{ fontFamily: 'var(--font-english)', fontWeight: 700, color: 'var(--primary-color)', fontSize: '0.95rem' }}>+${designPrices.premium}</div>
               </div>
             </div>
           </div>
@@ -465,8 +464,8 @@ export default function CustomWebsiteBuilder({ addServiceRequest }) {
                 style={{
                   flex: 1,
                   minWidth: '200px',
-                  border: '1px solid ' + (hosting === 'yes' ? 'var(--secondary-color)' : 'var(--panel-border)'),
-                  background: hosting === 'yes' ? 'rgba(6, 182, 212, 0.08)' : 'rgba(30, 33, 50, 0.4)',
+                  border: hosting === 'yes' ? '2px solid var(--secondary-color)' : '1px solid var(--secondary-color)',
+                  background: '#ffffff',
                   borderRadius: 'var(--border-radius-md)',
                   padding: '16px 20px',
                   cursor: 'pointer',
@@ -477,10 +476,10 @@ export default function CustomWebsiteBuilder({ addServiceRequest }) {
                 }}
               >
                 <div>
-                  <strong style={{ display: 'block', color: 'var(--text-white)', fontSize: '0.95rem' }}>نعم، أريد استضافة ودومين</strong>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>حجز وإعداد استضافة سحابية فائقة السرعة لسنة</span>
+                  <strong style={{ display: 'block', color: 'var(--primary-color)', fontSize: '0.95rem' }}>نعم، أريد استضافة ودومين</strong>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--primary-color)' }}>حجز وإعداد استضافة سحابية فائقة السرعة لسنة</span>
                 </div>
-                <span style={{ fontFamily: 'var(--font-english)', fontWeight: 700, color: 'var(--secondary-color)' }}>+${hostingPrice}</span>
+                <span style={{ fontFamily: 'var(--font-english)', fontWeight: 700, color: 'var(--primary-color)' }}>+${hostingPrice}</span>
               </div>
 
               <div 
@@ -488,8 +487,8 @@ export default function CustomWebsiteBuilder({ addServiceRequest }) {
                 style={{
                   flex: 1,
                   minWidth: '200px',
-                  border: '1px solid ' + (hosting === 'no' ? 'var(--secondary-color)' : 'var(--panel-border)'),
-                  background: hosting === 'no' ? 'rgba(6, 182, 212, 0.08)' : 'rgba(30, 33, 50, 0.4)',
+                  border: hosting === 'no' ? '2px solid var(--secondary-color)' : '1px solid var(--secondary-color)',
+                  background: '#ffffff',
                   borderRadius: 'var(--border-radius-md)',
                   padding: '16px 20px',
                   cursor: 'pointer',
@@ -500,10 +499,10 @@ export default function CustomWebsiteBuilder({ addServiceRequest }) {
                 }}
               >
                 <div>
-                  <strong style={{ display: 'block', color: 'var(--text-white)', fontSize: '0.95rem' }}>لا أحتاج، الدومين متوفر لدي</strong>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>لدي دومين واستضافة وسأقوم بتسليم بيانات الدخول</span>
+                  <strong style={{ display: 'block', color: 'var(--primary-color)', fontSize: '0.95rem' }}>لا أحتاج، الدومين متوفر لدي</strong>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--primary-color)' }}>لدي دومين واستضافة وسأقوم بتسليم بيانات الدخول</span>
                 </div>
-                <span style={{ fontFamily: 'var(--font-english)', fontWeight: 700, color: 'var(--secondary-color)' }}>+$0</span>
+                <span style={{ fontFamily: 'var(--font-english)', fontWeight: 700, color: 'var(--primary-color)' }}>+$0</span>
               </div>
             </div>
           </div>

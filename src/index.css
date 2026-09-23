@@ -1614,7 +1614,7 @@ button, .btn {
 
 .custom-select-card {
   background: #ffffff;
-  border: 1px solid var(--panel-border);
+  border: 1px solid var(--secondary-color);
   border-radius: var(--border-radius-md);
   padding: 20px;
   cursor: pointer;
@@ -1625,19 +1625,19 @@ button, .btn {
   align-items: center;
   justify-content: space-between;
   min-height: 200px;
-  box-shadow: var(--shadow-sm);
+  box-shadow: none;
 }
 
 .custom-select-card:hover {
-  border-color: var(--primary-color);
-  background: #f0f9ff;
+  border-color: var(--secondary-color);
+  background: #ffffff;
   transform: translateY(-2.5px);
 }
 
 .custom-select-card.selected {
-  border-color: var(--primary-color);
-  background: #e0f2fe;
-  box-shadow: 0 0 12px rgba(2, 132, 199, 0.15);
+  border: 2px solid var(--secondary-color);
+  background: #ffffff;
+  box-shadow: none;
 }
 
 .custom-select-card .card-icon {
@@ -1653,12 +1653,12 @@ button, .btn {
 .custom-select-card h4 {
   font-size: 1.05rem;
   margin-bottom: 6px;
-  color: #0f172a;
+  color: var(--primary-color);
 }
 
 .custom-select-card p {
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: var(--primary-color);
   line-height: 1.45;
   margin-bottom: 10px;
 }
@@ -1680,7 +1680,7 @@ button, .btn {
 
 .feature-checkbox-card {
   background: #ffffff;
-  border: 1px solid var(--panel-border);
+  border: 1px solid var(--secondary-color);
   border-radius: var(--border-radius-md);
   padding: 16px;
   cursor: pointer;
@@ -1688,17 +1688,17 @@ button, .btn {
   align-items: center;
   gap: 12px;
   transition: var(--transition-smooth);
-  box-shadow: var(--shadow-sm);
+  box-shadow: none;
 }
 
 .feature-checkbox-card:hover {
-  border-color: var(--primary-color);
-  background: #f0f9ff;
+  border-color: var(--secondary-color);
+  background: #ffffff;
 }
 
 .feature-checkbox-card.selected {
-  border-color: var(--primary-color);
-  background: #e0f2fe;
+  border: 2px solid var(--secondary-color);
+  background: #ffffff;
 }
 
 .feature-checkbox-card input[type="checkbox"] {
@@ -1718,12 +1718,12 @@ button, .btn {
 
 .feature-checkbox-info strong {
   font-size: 0.9rem;
-  color: #0f172a;
+  color: var(--primary-color);
 }
 
 .feature-checkbox-info span {
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: var(--primary-color);
 }
 
 .feature-checkbox-price {
