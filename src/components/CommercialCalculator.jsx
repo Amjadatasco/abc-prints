@@ -215,7 +215,7 @@ export default function CommercialCalculator({ addCommercialOrder }) {
               <input 
                 type="tel" 
                 className="form-input" 
-                placeholder="مثال: 966500000000+" 
+                placeholder="مثال: 46790081236+" 
                 value={contactPhone}
                 onChange={(e) => setContactPhone(e.target.value)}
                 required

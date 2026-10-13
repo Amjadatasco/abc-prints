@@ -552,7 +552,7 @@ export default function CustomWebsiteBuilder({ addServiceRequest }) {
                   id="client-phone"
                   type="tel" 
                   className="form-input" 
-                  placeholder="مثال: 966500000000+" 
+                  placeholder="مثال: 46790081236+" 
                   value={clientPhone}
                   onChange={(e) => setClientPhone(e.target.value)}
                   required

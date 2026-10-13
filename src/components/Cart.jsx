@@ -64,7 +64,7 @@ export default function Cart({ cartItems, removeFromCart, checkoutCart }) {
       `شكراً لكم!`;
 
     const encodedText = encodeURIComponent(whatsappText);
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=966500000000&text=${encodedText}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=46790081236&text=${encodedText}`;
 
     // Clear Form Fields
     setCustomerName('');

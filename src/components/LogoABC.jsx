@@ -1,6 +1,6 @@
-import logoArHQ from '../assets/logo_user_official.png?v=clean2';
-import logoArTransparent from '../assets/logo_ar_transparent.png?v=clean2';
-import logoEnTransparent from '../assets/logo_en_transparent.png?v=clean2';
+import logoArHQ from '../assets/logo_user_official.png?v=official3';
+import logoArTransparent from '../assets/logo_ar_transparent.png?v=official3';
+import logoEnTransparent from '../assets/logo_en_transparent.png?v=official3';
 
 /**
  * LogoABC - Official High-Quality Image Logo

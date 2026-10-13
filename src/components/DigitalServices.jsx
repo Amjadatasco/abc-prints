@@ -261,7 +261,7 @@ export default function DigitalServices({ addServiceRequest }) {
               <input 
                 type="tel" 
                 className="form-input" 
-                placeholder="مثال: 966500000000+" 
+                placeholder="مثال: 46790081236+" 
                 value={clientPhone}
                 onChange={(e) => setClientPhone(e.target.value)}
                 required
@@ -332,7 +332,14 @@ export default function DigitalServices({ addServiceRequest }) {
           <div style={{ marginTop: '24px', padding: '14px', background: '#ffffff', borderRadius: 'var(--border-radius-md)', border: '1px solid var(--panel-border)' }}>
             <p style={{ fontSize: '0.85rem', margin: 0, color: 'var(--text-muted)' }}>
               💬 هل تفضل التواصل الفوري المباشر؟ تواصل مع مهندس المشاريع عبر واتساب مباشرة: 
-              <strong style={{ display: 'block', marginTop: '6px', color: 'var(--primary-color)', fontSize: '0.95rem' }}>WhatsApp: +966 50 000 0000</strong>
+              <a 
+                href="https://wa.me/46790081236" 
+                target="_blank" 
+                rel="noreferrer"
+                style={{ display: 'block', marginTop: '6px', color: 'var(--primary-color)', fontSize: '0.95rem', fontWeight: 'bold', textDecoration: 'none' }}
+              >
+                WhatsApp: +46 79 008 1236
+              </a>
             </p>
           </div>
         </div>
