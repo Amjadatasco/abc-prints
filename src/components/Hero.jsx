@@ -36,6 +36,190 @@ export default function Hero({ setActiveTab }) {
       </section>
 
 
+      {/* Products Showcase / Gallery Section (معرض المنتجات القابلة للتنفيذ) */}
+      <section className="container" style={{ marginBottom: '60px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '35px' }}>
+          <div className="hero-badge" style={{ display: 'inline-block', marginBottom: '10px' }}>
+            ✨ تصنيع وتخصيص فوري بأعلى مقاييس الجودة
+          </div>
+          <h2 className="section-title" style={{ marginTop: '5px' }}>
+            معرض المنتجات القابلة للتنفيذ والطباعة
+          </h2>
+          <p className="hero-subtitle text-muted" style={{ maxWidth: '750px', margin: '0 auto' }}>
+            اختر منتجك المفضل وابدأ بتصميمه فوراً بإضافة شعارك، صورك، أو نصوصك الخاصة مع معاينة حية ثلاثية الأبعاد قبل الطلب!
+          </p>
+        </div>
+
+        <div style={{ 
+          display: 'grid', 
+          gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', 
+          gap: '24px' 
+        }}>
+          {[
+            {
+              id: 'mug',
+              title: 'أكواب سيراميك فاخرة',
+              desc: 'أكواب بيضاء مصقولة مع طباعة حرارية كاملة مقاومة للغسيل والحرارة المرتفعة.',
+              price: '$6.50',
+              tag: 'الأكثر طلباً',
+              tech: 'UV Flatbed',
+              img: '/mockups/blank_mug.png'
+            },
+            {
+              id: 'acrylic',
+              title: 'ألواح أكريليك مضيئة LED',
+              desc: 'أكريليك نقي كريستالي شفاف مع قاعدة خشبية فاخرة وإضاءة دافئة للمكاتب والمطاعم.',
+              price: '$15.00',
+              tag: 'ديكور وهدايا',
+              tech: 'UV Flatbed 6090',
+              img: '/mockups/blank_acrylic.png'
+            },
+            {
+              id: 'tshirt',
+              title: 'تيشرتات قطنية 100%',
+              desc: 'أقمشة قطنية عالية النعومة مع طباعة DTF رقمية ناصعة الألوان ومقاومة للتشقق.',
+              price: '$18.00',
+              tag: 'ملابس ومناسبات',
+              tech: 'DTF 60cm',
+              img: '/mockups/blank_tshirt.png'
+            },
+            {
+              id: 'phone',
+              title: 'كوفرات حماية للهاتف',
+              desc: 'كفرات سيليكون مرنة وصدمات قوية مع طباعة بارزة ولامعة لكافة موديلات الهواتف.',
+              price: '$8.00',
+              tag: 'إكسسوارات',
+              tech: 'UV Flatbed',
+              img: '/mockups/blank_phone.png'
+            },
+            {
+              id: 'sticker',
+              title: 'ملصقات شعار UV DTF',
+              desc: 'ملصقات نقل ذكية ثلاثية الأبعاد تنقل الشعار مباشرة على الزجاج، البلاستيك والمعادن.',
+              price: '$4.00',
+              tag: 'براندينغ فوري',
+              tech: 'UV DTF Roll',
+              img: '/mockups/blank_sticker.png'
+            }
+          ].map((item) => (
+            <div 
+              key={item.id}
+              className="glass-panel"
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                padding: '20px',
+                borderRadius: 'var(--border-radius-lg)',
+                border: '1px solid var(--panel-border)',
+                transition: 'all 0.3s ease',
+                position: 'relative',
+                overflow: 'hidden',
+                background: '#ffffff',
+                boxShadow: 'var(--shadow-sm)'
+              }}
+            >
+              {/* Product Badge */}
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
+                <span style={{ 
+                  background: 'rgba(2, 132, 199, 0.08)', 
+                  color: 'var(--primary-color)', 
+                  padding: '4px 10px', 
+                  borderRadius: '20px', 
+                  fontSize: '0.75rem', 
+                  fontWeight: 700 
+                }}>
+                  {item.tag}
+                </span>
+                <span style={{ 
+                  fontSize: '0.72rem', 
+                  color: 'var(--text-muted)', 
+                  fontFamily: 'var(--font-english)', 
+                  fontWeight: 600,
+                  direction: 'ltr'
+                }}>
+                  {item.tech}
+                </span>
+              </div>
+
+              {/* Product Mockup Image Container */}
+              <div 
+                style={{ 
+                  background: '#f8fafc', 
+                  borderRadius: '12px', 
+                  padding: '16px', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  marginBottom: '16px',
+                  minHeight: '170px',
+                  border: '1px solid #f1f5f9'
+                }}
+              >
+                <img 
+                  src={item.img} 
+                  alt={item.title} 
+                  style={{ 
+                    maxHeight: '140px', 
+                    maxWidth: '100%', 
+                    objectFit: 'contain',
+                    filter: 'drop-shadow(0 8px 12px rgba(0,0,0,0.06))'
+                  }} 
+                />
+              </div>
+
+              {/* Product Info */}
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+                <h3 style={{ fontSize: '1.1rem', marginBottom: '6px', color: '#0f172a' }}>
+                  {item.title}
+                </h3>
+                <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', lineHeight: '1.5', marginBottom: '16px' }}>
+                  {item.desc}
+                </p>
+              </div>
+
+              {/* Price & Action Button */}
+              <div style={{ 
+                borderTop: '1px solid #f1f5f9', 
+                paddingTop: '14px', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'space-between',
+                gap: '10px'
+              }}>
+                <div>
+                  <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)', display: 'block' }}>يبدأ من</span>
+                  <span style={{ 
+                    fontSize: '1.25rem', 
+                    fontWeight: 800, 
+                    color: 'var(--primary-color)', 
+                    fontFamily: 'var(--font-english)' 
+                  }}>
+                    {item.price}
+                  </span>
+                </div>
+
+                <button 
+                  className="btn btn-primary"
+                  onClick={() => setActiveTab('customizer')}
+                  style={{ 
+                    padding: '8px 14px', 
+                    fontSize: '0.85rem', 
+                    borderRadius: '8px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px'
+                  }}
+                >
+                  <span>صمم الآن</span>
+                  <span>🎨</span>
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Core Services Categories Section */}
       <section className="container">
         <h2 className="section-title">خدماتنا الرئيسية وحلولنا الشاملة</h2>
