@@ -195,7 +195,7 @@ export default function SmartAssistant({ orders = [], serviceRequests = [], setA
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span style={{ fontSize: '1.4rem' }}>🤖</span>
               <div>
-                <h4 style={{ margin: 0, fontSize: '1rem', color: '#fff' }}>مستشار ABC الذكي</h4>
+                <h4 style={{ margin: 0, fontSize: '1rem', color: 'var(--text-dark)' }}>مستشار ABC الذكي</h4>
                 <span style={{ fontSize: '0.75rem', color: 'var(--secondary-color)' }}>متصل ومستعد لمساعدتك</span>
               </div>
             </div>

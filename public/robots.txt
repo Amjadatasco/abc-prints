@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin
 
-Sitemap: https://abc-printing.com/sitemap.xml
+Sitemap: https://abc-prints.com/sitemap.xml
