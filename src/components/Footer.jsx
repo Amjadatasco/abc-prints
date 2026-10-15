@@ -17,6 +17,9 @@ export default function Footer({ setActiveTab }) {
         </ul>
         <div style={{ margin: '15px 0', fontSize: '0.95rem', color: 'var(--text-muted)', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
           <div>
+            📍 العنوان: <span style={{ color: 'var(--text-main)', fontWeight: 'bold' }}>حمص - جورة الشياح - خلف مقهى الروضة</span>
+          </div>
+          <div>
             📧 البريد: <a href="mailto:info@abc-prints.com" style={{ color: 'var(--primary-color)', textDecoration: 'none', fontWeight: 'bold', display: 'inline-block', direction: 'ltr' }}>info@abc-prints.com</a>
           </div>
           <div>
