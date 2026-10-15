@@ -7,10 +7,10 @@ export default function Hero({ setActiveTab }) {
       <section className="hero-sec">
         <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           
-          {/* Hero Logo — 3D Prominent Floating Emblem */}
+          {/* Hero Logo — 3D Prominent Floating Emblem with Smooth Auto-Flip */}
           <div className="hero-logo-3d-container">
             <div className="hero-logo-3d-card">
-              <LogoABC variant="ar" size="lg" dark={false} />
+              <LogoABC variant="ar" size="lg" autoFlip={true} interval={4000} dark={false} />
             </div>
           </div>
 
