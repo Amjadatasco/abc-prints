@@ -301,7 +301,6 @@ button, .btn {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  mix-blend-mode: multiply;
   object-fit: contain;
 }
 

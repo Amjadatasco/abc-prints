@@ -13,10 +13,10 @@ import logoEnTransparent from '../assets/logo_en_transparent.png?v=transp4';
  *  style:   custom inline styles
  */
 export default function LogoABC({ variant = 'ar', size = 'md', dark = false, style = {} }) {
-  // Height mapping: sm=54px (navbar), md=96px (footer), lg=165px (hero), xl=220px
+  // Height mapping: sm=78px (navbar), md=105px (footer), lg=165px (hero), xl=220px
   const heightMap = {
-    sm: 54,
-    md: 96,
+    sm: 78,
+    md: 105,
     lg: 165,
     xl: 220
   };
