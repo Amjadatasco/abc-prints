@@ -1,30 +1,29 @@
-import logoArHQ from '../assets/logo_user_official.png?v=official3';
-import logoArTransparent from '../assets/logo_ar_transparent.png?v=official3';
-import logoEnTransparent from '../assets/logo_en_transparent.png?v=official3';
+import logoArHQ from '../assets/logo_user_official.png?v=transp4';
+import logoArTransparent from '../assets/logo_ar_transparent.png?v=transp4';
+import logoEnTransparent from '../assets/logo_en_transparent.png?v=transp4';
 
 /**
  * LogoABC - Official High-Quality Image Logo
- * Uses the highest quality source image for crisp rendering on all screens.
+ * Uses transparent background PNG with crisp rendering on all screens.
  *
  * Props:
  *  variant: 'ar' (Arabic subtitle) | 'en' (English subtitle)
- *  size:    'sm' (Navbar: 72px) | 'md' (Footer/Cards: 120px) | 'lg' (Hero Section: 140px)
+ *  size:    'sm' (Navbar: 54px) | 'md' (Footer/Cards: 96px) | 'lg' (Hero Section: 160px) | 'xl' (Hero Wide: 210px)
  *  dark:    true | false
  *  style:   custom inline styles
  */
 export default function LogoABC({ variant = 'ar', size = 'md', dark = false, style = {} }) {
-  // Height mapping: sm=54px (navbar), md=96px (footer), lg=145px (hero), xl=180px
+  // Height mapping: sm=54px (navbar), md=96px (footer), lg=165px (hero), xl=220px
   const heightMap = {
     sm: 54,
     md: 96,
-    lg: 145,
-    xl: 180
+    lg: 165,
+    xl: 220
   };
   const height = heightMap[size] || 96;
 
   // Use highest quality source for Arabic, transparent for English
   const imgSrc = variant === 'en' ? logoEnTransparent : logoArHQ;
-  // Provide 1x fallback for smaller renders
   const imgSrcFallback = variant === 'en' ? logoEnTransparent : logoArTransparent;
 
   return (
@@ -45,17 +44,17 @@ export default function LogoABC({ variant = 'ar', size = 'md', dark = false, sty
         src={imgSrc}
         srcSet={`${imgSrcFallback} 1x, ${imgSrc} 2x`}
         alt={variant === 'en' ? 'ABC Printing & Advertising' : 'ABC للطباعة والإعلان'}
-        width={Math.round(height * 2.05)}
+        width={Math.round(height * 2.04)}
         height={height}
         style={{
           height: `${height}px`,
           width: 'auto',
-          maxHeight: '100%',
+          maxWidth: '100%',
           objectFit: 'contain',
           display: 'block',
           imageRendering: 'auto',
           background: 'transparent',
-          mixBlendMode: dark ? 'normal' : 'multiply',
+          mixBlendMode: 'normal',
           filter: dark ? 'brightness(0) invert(1)' : 'none'
         }}
       />
