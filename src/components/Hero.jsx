@@ -7,9 +7,11 @@ export default function Hero({ setActiveTab }) {
       <section className="hero-sec">
         <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           
-          {/* Hero Logo — Clean authentic brand emblem */}
-          <div style={{ marginBottom: '24px', display: 'flex', justifyContent: 'center', background: 'transparent' }}>
-            <LogoABC variant="ar" size="lg" dark={false} />
+          {/* Hero Logo — 3D Prominent Floating Emblem */}
+          <div className="hero-logo-3d-container">
+            <div className="hero-logo-3d-card">
+              <LogoABC variant="ar" size="lg" dark={false} />
+            </div>
           </div>
 
           <div className="hero-badge">
