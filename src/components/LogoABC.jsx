@@ -39,14 +39,14 @@ export default function LogoABC({
     return () => clearInterval(timer);
   }, [autoFlip, interval]);
 
-  // Height mapping: sm=78px (navbar), md=105px (footer), lg=165px (hero), xl=220px
+  // Balanced height mapping: sm=52px (navbar), md=80px (footer), lg=110px (hero)
   const heightMap = {
-    sm: 78,
-    md: 105,
-    lg: 165,
-    xl: 220
+    sm: 52,
+    md: 80,
+    lg: 110,
+    xl: 140
   };
-  const height = heightMap[size] || 96;
+  const height = heightMap[size] || 80;
 
   const activeLang = autoFlip ? currentLang : variant;
   const imgSrc = activeLang === 'en' ? logoEnTransparent : logoArHQ;
