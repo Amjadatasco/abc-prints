@@ -137,10 +137,32 @@ export default function App() {
     } catch { return defaultMockServiceRequests; }
   });
 
+  // Real Customer Reviews state
+  const [reviews, setReviews] = useState(() => {
+    try {
+      const savedReviews = localStorage.getItem('abc_customer_reviews_v1');
+      return savedReviews ? JSON.parse(savedReviews) : [];
+    } catch { return []; }
+  });
+
   // Sync state to localStorage
   useEffect(() => {
     localStorage.setItem('abc_cart', JSON.stringify(cart));
   }, [cart]);
+
+  useEffect(() => {
+    localStorage.setItem('abc_customer_reviews_v1', JSON.stringify(reviews));
+  }, [reviews]);
+
+  const addReview = (newReview) => {
+    setReviews((prev) => [newReview, ...prev]);
+  };
+
+  const removeReview = (reviewId) => {
+    if (confirm('هل ترغب في حذف هذا التقييم من الموقع؟')) {
+      setReviews((prev) => prev.filter((r) => r.id !== reviewId));
+    }
+  };
 
   // Load from Supabase on mount (with localStorage fallback)
   useEffect(() => {
@@ -319,7 +341,7 @@ export default function App() {
       <main style={{ flex: 1, paddingTop: '30px' }}>
         <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}><div style={{ width: 40, height: 40, border: '3px solid #e2e8f0', borderTopColor: '#0284c7', borderRadius: '50%', animation: 'spin 0.8s linear infinite' }} /></div>}>
           {activeTab === 'home' && (
-            <Hero setActiveTab={navigateTo} />
+            <Hero setActiveTab={navigateTo} reviews={reviews} onAddReview={addReview} />
           )}
           {activeTab === 'customizer' && (
             <ProductCustomizer addToCart={addToCart} />
@@ -344,10 +366,12 @@ export default function App() {
             <AdminDashboard 
               orders={orders} 
               serviceRequests={serviceRequests}
+              reviews={reviews}
               updateOrderStatus={updateOrderStatus} 
               updateServiceStatus={updateServiceStatus}
               removeOrder={removeOrder} 
               removeServiceRequest={removeServiceRequest}
+              removeReview={removeReview}
             />
           )}
         </Suspense>

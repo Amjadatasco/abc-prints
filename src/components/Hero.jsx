@@ -1,6 +1,7 @@
 import LogoABC from './LogoABC';
+import CustomerReviews from './CustomerReviews';
 
-export default function Hero({ setActiveTab }) {
+export default function Hero({ setActiveTab, reviews = [], onAddReview }) {
   return (
     <div className="fade-in">
       {/* Main Hero Header */}
@@ -299,54 +300,8 @@ export default function Hero({ setActiveTab }) {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="testimonials-section">
-        <div className="container">
-          <h2 className="section-title">شركاء النجاح وآراء عملائنا</h2>
-          <div className="machines-grid" style={{ marginTop: '40px' }}>
-            
-            <div className="glass-panel testimonial-card">
-              <p style={{ fontStyle: 'italic', fontSize: '0.95rem' }}>
-                "تعاونا مع ABC لتصميم وبرمجة متجرنا الإلكتروني وإطلاق حملة تسويقية على سناب شات وتيك توك. تضاعفت مبيعاتنا خلال الشهر الأول بفضل استهدافهم الذكي وموقعهم السريع جداً!"
-              </p>
-              <div className="testimonial-author">
-                <div className="testimonial-avatar">ح</div>
-                <div>
-                  <h4 style={{ fontSize: '0.95rem' }}>حلويات الحجاز الفاخرة</h4>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>متجر إلكتروني وتسويق</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="glass-panel testimonial-card" style={{ borderRightColor: 'var(--secondary-color)' }}>
-              <p style={{ fontStyle: 'italic', fontSize: '0.95rem' }}>
-                "طلبنا طباعة لوحات أكريليك وقواعد مضيئة LED لطاولات المطعم بجانب طباعة تيشرتات الطاقم بتقنية DTF. دقة الألوان في ماكينات UV لديهم مذهلة وتتحمل الاستخدام المكثف."
-              </p>
-              <div className="testimonial-author">
-                <div className="testimonial-avatar" style={{ background: 'var(--secondary-color)' }}>ب</div>
-                <div>
-                  <h4 style={{ fontSize: '0.95rem' }}>مطعم وكافيه برجر فاكتوري</h4>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>خدمات طباعة وإنتاج مادي</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="glass-panel testimonial-card" style={{ borderRightColor: 'var(--accent-amber)' }}>
-              <p style={{ fontStyle: 'italic', fontSize: '0.95rem' }}>
-                "قمنا بنقل هوية شركتنا بالكامل بالتعاون مع ABC. صمموا لنا شعاراً مبدعاً وكتالوج المنتجات واللوحات الخارجية لمكاتبنا. احترافية عالية جداً والتزام تام بالمواعيد."
-              </p>
-              <div className="testimonial-author">
-                <div className="testimonial-avatar" style={{ background: 'var(--accent-amber)', color: '#000' }}>م</div>
-                <div>
-                  <h4 style={{ fontSize: '0.95rem' }}>مجموعة الأفق العقارية</h4>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>تصميم براندينغ ودعاية</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      {/* Real Customer Reviews Section (معرض آراء وتصوير الزبائن الحقيقي) */}
+      <CustomerReviews reviews={reviews} onAddReview={onAddReview} />
 
       {/* Shipping Promo section */}
       <section className="container" style={{ marginBottom: '80px' }}>

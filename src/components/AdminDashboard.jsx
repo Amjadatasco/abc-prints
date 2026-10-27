@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import * as XLSX from 'xlsx';
 
-export default function AdminDashboard({ orders, serviceRequests, updateOrderStatus, updateServiceStatus, removeOrder, removeServiceRequest }) {
+export default function AdminDashboard({ orders, serviceRequests, reviews = [], updateOrderStatus, updateServiceStatus, removeOrder, removeServiceRequest, removeReview }) {
   const [activeSubTab, setActiveSubTab] = useState('printing');
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
     return sessionStorage.getItem('abc_admin_authenticated') === 'true' || sessionStorage.getItem('output_admin_authenticated') === 'true';
@@ -231,7 +231,7 @@ export default function AdminDashboard({ orders, serviceRequests, updateOrderSta
       </div>
 
       {/* Main Admin Navigation */}
-      <div className="glass-panel" style={{ padding: '12px', marginBottom: '24px', display: 'flex', gap: '16px' }}>
+      <div className="glass-panel" style={{ padding: '12px', marginBottom: '24px', display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
         <button 
           className={`btn ${activeSubTab === 'printing' ? 'btn-primary' : 'btn-outline'}`}
           onClick={() => setActiveSubTab('printing')}
@@ -245,6 +245,13 @@ export default function AdminDashboard({ orders, serviceRequests, updateOrderSta
           style={{ padding: '10px 20px' }}
         >
           🌐 طلبات الخدمات الرقمية والتسويق ({digitalStats.total})
+        </button>
+        <button 
+          className={`btn ${activeSubTab === 'reviews' ? 'btn-primary' : 'btn-outline'}`}
+          onClick={() => setActiveSubTab('reviews')}
+          style={{ padding: '10px 20px', borderColor: 'var(--secondary-color)', color: activeSubTab === 'reviews' ? '#fff' : 'var(--secondary-color)' }}
+        >
+          ⭐ تقييمات الزبائن ({reviews.length})
         </button>
       </div>
 
@@ -464,6 +471,73 @@ export default function AdminDashboard({ orders, serviceRequests, updateOrderSta
                             🗑️
                           </button>
                         </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+      )}
+      {/* SUBTAB 3: REVIEWS TABLE */}
+      {activeSubTab === 'reviews' && (
+        <div className="glass-panel" style={{ padding: '0px', overflow: 'hidden' }}>
+          <h3 style={{ padding: '20px 20px 10px', fontSize: '1.2rem', color: 'var(--secondary-color)' }}>
+            تقييمات وآراء الزبائن وصور المنتجات
+          </h3>
+          {reviews.length === 0 ? (
+            <div style={{ padding: '40px', textAlign: 'center', color: 'var(--text-muted)' }}>
+              لا توجد تقييمات مضافة من الزبائن حتى الآن.
+            </div>
+          ) : (
+            <div className="table-responsive">
+              <table className="orders-table">
+                <thead>
+                  <tr>
+                    <th>الصورة المرفقة</th>
+                    <th>العميل</th>
+                    <th>المنتج</th>
+                    <th>التقييم</th>
+                    <th>التعليق</th>
+                    <th>التاريخ</th>
+                    <th>إجراءات</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {reviews.map((rev) => (
+                    <tr key={rev.id}>
+                      <td style={{ textAlign: 'center' }}>
+                        {rev.photo ? (
+                          <img 
+                            src={rev.photo} 
+                            alt="تصوير العميل" 
+                            style={{ width: '48px', height: '48px', borderRadius: '6px', objectFit: 'cover', border: '1px solid #cbd5e1' }} 
+                          />
+                        ) : (
+                          <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>بدون صورة</span>
+                        )}
+                      </td>
+                      <td style={{ fontWeight: 600 }}>{rev.name}</td>
+                      <td>
+                        <span style={{ background: 'rgba(2, 132, 199, 0.08)', color: 'var(--primary-color)', padding: '2px 8px', borderRadius: '10px', fontSize: '0.8rem' }}>
+                          {rev.productType}
+                        </span>
+                      </td>
+                      <td style={{ color: '#f59e0b', fontSize: '1rem' }}>
+                        {'★'.repeat(rev.rating)}
+                      </td>
+                      <td style={{ maxWidth: '280px', fontSize: '0.85rem' }}>{rev.comment}</td>
+                      <td style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{rev.date}</td>
+                      <td>
+                        <button
+                          onClick={() => removeReview(rev.id)}
+                          className="btn btn-outline"
+                          style={{ padding: '4px 10px', fontSize: '0.8rem', borderColor: 'rgba(239, 68, 68, 0.4)', color: 'var(--accent-red)' }}
+                          title="حذف التقييم من الموقع"
+                        >
+                          🗑️ حذف
+                        </button>
                       </td>
                     </tr>
                   ))}
